@@ -4,11 +4,13 @@ version = "0.1.0"
 description = "The hummingbird coding agent - minimalist, powerful, model-agnostic, and composable."
 requires-python = ">=3.10"
 dependencies = [
-    "litellm",    # For model-agnostic API calls
-    "langfuse",   # For deep observability and token tracking
-    "pydantic",   # For strict tool schema validation
-    "textual",    # For high-performance Terminal UI
+    "litellm>=1.83.0",    # Forcing version 1.83.0+ to avoid the compromised 1.82.7/1.82.8 versions
+    "langfuse<3.0.0",     # Pinning to v2 to maintain LiteLLM compatibility
+    "python-dotenv",      # For loading our .env secrets
+    "pydantic",           
+    "textual",            
 ]
+
 
 [project.scripts]
 hummcode = "hummcode.core:main"
