@@ -1,0 +1,14 @@
+[project]
+name = "hummcode"
+version = "0.1.0"
+description = "The hummingbird coding agent - minimalist, powerful, model-agnostic, and composable."
+requires-python = ">=3.10"
+dependencies = [
+    "litellm",    # For model-agnostic API calls
+    "langfuse",   # For deep observability and token tracking
+    "pydantic",   # For strict tool schema validation
+    "textual",    # For high-performance Terminal UI
+]
+
+[project.scripts]
+hummcode = "hummcode.core:main"
