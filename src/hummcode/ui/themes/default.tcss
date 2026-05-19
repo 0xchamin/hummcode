@@ -1,0 +1,67 @@
+/* Executive Dark Theme for Hummcode */
+Screen {
+    background: #1e1e1e; /* Deep charcoal */
+    color: #e2e8f0;      /* Soft white/gray text */
+}
+
+Header {
+    background: #0f172a; /* Slate dark */
+    color: #38bdf8;      /* Cyan accent */
+}
+
+#placeholder {
+    width: 100%;
+    height: 1fr;
+    content-align: center middle;
+    color: #a7f3d0;      /* Emerald success accent */
+}
+
+Footer {
+    background: #0f172a;
+}
+
+#main-container {
+    layout: grid;
+    grid-size: 2 2;          /* 2 columns, 2 rows */
+    grid-columns: 2fr 1fr;   /* Left pane is 2x wider than right pane */
+    grid-rows: 1fr auto;     /* Top row takes available space, bottom row fits the input */
+}
+
+#chat-log {
+    border: round #38bdf8;   /* Cyan border */
+    height: 100%;
+}
+
+#tool-log {
+    border: round #475569;   /* Slate border */
+    height: 100%;
+}
+
+#chat-input {
+    column-span: 2;          /* Stretches across both columns at the bottom */
+    border: round #a7f3d0;   /* Emerald border */
+}
+
+
+PermissionModal {
+    align: center middle;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#permission-dialog {
+    width: 60;
+    height: auto;
+    padding: 2 4;
+    background: #1e293b;
+    border: heavy #fbbf24;
+}
+
+#permission-buttons {
+    width: 100%;
+    align: center middle;
+    height: auto;
+    content-align: center middle;
+}
+
+Button { margin: 1 2; }
+
