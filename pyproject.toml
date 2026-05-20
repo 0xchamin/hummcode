@@ -1,16 +1,48 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project]
 name = "hummcode"
 version = "0.1.0"
-description = "The hummingbird coding agent - minimalist, powerful, model-agnostic, and composable."
+description = "The Hummingbird Coding Agent — minimalist, powerful, model-agnostic, and composable."
+readme = "README.md"
+license = { text = "MIT" }
 requires-python = ">=3.10"
+authors = [
+  { name = "Chamin Hewage", email = "chmk90@gmail.com" }
+]
+keywords = [
+  "coding-agent", "ai", "llm", "cli", "model-agnostic",
+  "anthropic", "openai", "litellm", "textual", "langfuse"
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Topic :: Terminals",
+  "Environment :: Console",
+]
 dependencies = [
-    "litellm>=1.83.0",    # Forcing version 1.83.0+ to avoid the compromised 1.82.7/1.82.8 versions
-    "langfuse<3.0.0",     # Pinning to v2 to maintain LiteLLM compatibility
-    "python-dotenv",      # For loading our .env secrets
-    "pydantic",           
-    "textual",            
+  "litellm>=1.83.0",
+  "langfuse<3.0.0",
+  "python-dotenv",
+  "pydantic",
+  "textual",
 ]
 
+[project.urls]
+Homepage = "https://github.com/0xchamin/hummcode"
+Repository = "https://github.com/0xchamin/hummcode"
+"Bug Tracker" = "https://github.com/0xchamin/hummcode/issues"
 
 [project.scripts]
 hummcode = "hummcode.core:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/hummcode"]

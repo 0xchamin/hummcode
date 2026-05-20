@@ -1,4 +1,5 @@
 import os
+import sys 
 import asyncio
 from dotenv import load_dotenv
 import litellm
@@ -124,7 +125,15 @@ async def main_cli():
                 print(f"\n🐦 Hummcode: {event['content']}")
 
 def main():
-    asyncio.run(main_cli())
+    if "--cli" in sys.argv:
+        # Run the headless text version
+        asyncio.run(main_cli())
+    else:
+        # Run the Textual UI by default
+        from hummcode.ui.tui import HummcodeApp
+        app = HummcodeApp()
+        app.run()
 
 if __name__ == "__main__":
     main()
+
