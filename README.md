@@ -759,7 +759,7 @@ hummcode --cli                # headless
 
 ## License
 
-MIT © [Chamin Hewage](https://github.com/0xchamin) / [BlackEagleLabs.ai](https://blackeaglelabs.ai)
+MIT © [Chamin Hewage](https://www.linkedin.com/in/chaminhewage/) 
 
 ---
 
