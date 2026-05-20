@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "hummcode"
-version = "0.1.0"
+version = "0.1.1"
 description = "The Hummingbird Coding Agent — minimalist, powerful, model-agnostic, and composable."
 readme = "README.md"
 license = { text = "MIT" }

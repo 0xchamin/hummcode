@@ -723,6 +723,9 @@ source .venv/bin/activate     # Windows: .venv\Scripts\activate
 
 pip install -e .
 
+# Before making any changes, read the project constitution
+cat AGENTS.md
+
 cp .env.example .env          # fill in your keys
 
 hummcode                      # TUI
@@ -731,7 +734,26 @@ hummcode --cli                # headless
 
 ---
 
+## Contributing
+
+Before opening a PR, read `AGENTS.md` — it covers the architecture
+rules, coding conventions, and security constraints that all contributions
+must follow. The short version:
+
+- Tool logic belongs in `tools/`, never in `core.py`
+- All tool functions return strings — errors included, never raised
+- New tools need a Pydantic schema and a route in `registry.py`
+- No blocking calls inside the agent loop
+
+Current priorities are tracked in `PLAN.md`.
+
+---
+
 ## Roadmap
+
+
+The full prioritised task list with architectural decisions and known
+issues is in [`PLAN.md`](PLAN.md). Short version:
 
 - [ ] `/save` / `/load` — Persist and restore session trees to JSON
 - [ ] Command autocomplete dropdown — Slack-style popup when typing `/`
